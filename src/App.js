@@ -97,6 +97,8 @@ const movies = {
   },
 };
 
+
+
 class App extends Component {
   render() {
     return (
@@ -105,7 +107,14 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
-        <h2>How Popular is Your Favorite Movie?</h2>
+        <h2>How Popular is Your Favorite Movie? (Need to revisit this)</h2>
+        {
+          Object.keys(movies).map(movie => (
+            <h2 key={movies[movie].id}>
+              {movies[movie].name}
+            </h2>
+          ))
+        }
       </div>
     );
   }
